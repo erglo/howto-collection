@@ -1,4 +1,4 @@
-# GitHub - Rename a repository
+# GitHub - Renaming a repository
 
 1. Log-in to GitHub and open the repository's `Settings`.
 
