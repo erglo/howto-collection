@@ -6,7 +6,6 @@ REF.: [GitHub Docs - Adding a new SSH key to your GitHub account](https://docs.g
 REF.: [Git - git-config Documentation - `user.signingKey`](https://git-scm.com/docs/git-config#Documentation/git-config.txt-usersigningKey)  
 REF.: [GitHub Docs - Switching remote URLs from HTTPS to SSH](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh)  
 
-
 **Note:**  
 If you haven't used your SSH key for a year, GitHub will automatically delete your inactive SSH key as a security precaution.  
 This is a step-by-step TL;DR style walkthrough.  
@@ -23,9 +22,9 @@ $ ls -al ~/.ssh
 If you receive an error that `~/.ssh` doesn't exist, you do _not_ have an existing SSH key pair in the default location. Either generate a new SSH key or upload an existing key.  
 By default, the filenames of supported public keys for GitHub are one of the following.
 
-- id_rsa.pub  
-- id_ecdsa.pub  
-- id_ed25519.pub  
+- `id_rsa.pub`  
+- `id_ecdsa.pub`  
+- `id_ed25519.pub`  
 
 ----
 
