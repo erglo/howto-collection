@@ -1,11 +1,15 @@
-# GitHub - Connect with SSH (_via Git Bash on Windows_)
+# GitHub - Connect with SSH (_using Git Bash on Windows_)
 
 REF.: [GitHub Docs - Checking for existing SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)  
 REF.: [GitHub Docs - Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)  
 REF.: [GitHub Docs - Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)  
 REF.: [Git - git-config Documentation - `user.signingKey`](https://git-scm.com/docs/git-config#Documentation/git-config.txt-usersigningKey)  
+REF.: [GitHub Docs - Switching remote URLs from HTTPS to SSH](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh)  
 
-**Note:** If you haven't used your SSH key for a year, then GitHub will automatically delete your inactive SSH key as a security precaution.
+
+**Note:**  
+If you haven't used your SSH key for a year, GitHub will automatically delete your inactive SSH key as a security precaution.  
+This is a step-by-step TL;DR style walkthrough.  
 
 ----
 
@@ -16,12 +20,12 @@ $ ls -al ~/.ssh
 # Lists the files in your .ssh directory, if they exist
 ```
 
-If you receive an error that ~/.ssh doesn't exist, you do not have an existing SSH key pair in the default location. Either generate a new SSH key or upload an existing key.  
-By default, the filenames of supported public keys for GitHub are one of the following:
+If you receive an error that `~/.ssh` doesn't exist, you do _not_ have an existing SSH key pair in the default location. Either generate a new SSH key or upload an existing key.  
+By default, the filenames of supported public keys for GitHub are one of the following.
 
-- id_rsa.pub
-- id_ecdsa.pub
-- id_ed25519.pub
+- id_rsa.pub  
+- id_ecdsa.pub  
+- id_ed25519.pub  
 
 ----
 
