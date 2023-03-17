@@ -4,93 +4,98 @@
 
 ----
 
-### Creating a New Branch
+## Creating a New Branch
 
-```git
+```shell
 git branch <new-branch-name>
-```
-
-### Creating a New Branch up to a Specific Commit
-
-```git
+# creating a New Branch up to a Specific Commit
 git branch <new-branch-name> <commit-hash>
-```
-
-### Switching Branches
-
-```git
-git checkout <branch-name>
-```
-
-_or_ (Git v2.23+)
-
-```git
-git switch <branch-name>
 ```
 
 ### Creating and Switching to a New Branch
 
-```git
+```shell
 git checkout -b <new-branch-name>
-```
-
-_or_ (Git v2.23+)
-
-```git
+# or (Git v2.23+)
 git switch -c <new-branch-name>
 git switch --create <new-branch-name>
 ```
 
-### Return to Previous Branch
+## Switching Branches
 
-```git
-git checkout <other-branch-name>
+```shell
+git checkout <branch-name>
+# or (Git v2.23+)
+git switch <branch-name>
 ```
 
-_or_ (Git v2.23+)
+### Return to Previous Branch
 
-```git
+```shell
+git checkout <other-branch-name>
+# or (Git v2.23+)
 git switch -
 ```
 
-### Merging Changes to the Main Branch
+## Merging Changes to the `main` Branch
 
-```git
+```shell
 git checkout main
 git merge <branch-name>
 ```
 
-### Deleting a Branch
+## Deleting a Branch
 
-```git
+```shell
+# local
 git branch -d <branch-name>
+# remote
+git push origin –d <branch-name>
 ```
 
-### Changing a Branch Name
+## Renaming a Branch
 
-```git
+```shell
 git branch -M <old-branch-name> <new-branch-name>
 git branch --move <old-branch-name> <new-branch-name>
 ```
 
 _Let others see the corrected branch on the remote:_
 
-```git
+```shell
 git push --set-upstream origin <new-branch-name>
 git push origin --delete <old-branch-name>
 ```
 
-### Listing Branches
+## Listing Branches
 
 Examples:
 
-```git
+```shell
+# local branches
 git branch
+git branch -l
+git branch --list
+# local branches with each last commit
 git branch -v
+# local branches with each last commit and upstream branch
+git branch -vv
+# local branches which have merged with current/given branch
 git branch --merged
+git branch --merged <branch-name>
+# local branches which have NOT merged with current/given branch
 git branch --no-merged
-git branch --no-merged master
+git branch --no-merged <branch-name>
+# branches with/without specific/last commit
+git --contains [<commit>]
+git --no-contains [<commit>]
+# local and remote branches
+git branch -a
 git branch --all
+# remote branches only
+git branch -r
+git branch --remotes
+
 ```
 
 ----
@@ -99,7 +104,6 @@ git branch --all
 
 A graphical tool to resolve merging issues:
 
-```git
+```shell
 git mergetool
 ```
-
