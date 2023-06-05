@@ -59,6 +59,7 @@ _or_ (all tags)
 
 ```git
 git push origin --tags
+# not recommended
 ```
 
 ### Deleting a Shared Tag
