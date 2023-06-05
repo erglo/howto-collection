@@ -31,7 +31,8 @@ _Note:_ The **colon** removes the tag from the remote repository. Everyone else 
 ### List Tags
 
 ```git
-git tag [--list or -l] 
+git tag [--list or -l] <pattern>
+# with optional string pattern
 ```
 
 _or_ (with commit message)

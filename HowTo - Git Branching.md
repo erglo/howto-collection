@@ -67,6 +67,12 @@ git push --set-upstream origin <new-branch-name>
 git push origin --delete <old-branch-name>
 ```
 
+## Removing an upstream for a local branch
+
+```shell
+git branch --unset-upstream <branchname>
+```
+
 ## Listing Branches
 
 Examples:
