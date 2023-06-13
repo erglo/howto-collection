@@ -1,6 +1,6 @@
-# HowTo - Git Branching
+# HowTo - Git Branch
 
-:link: [Git Book - 3.1 Git Branching - Branches in a Nutshell](http://book.git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell#ch03-git-branching)
+REF.: [Git Book - 3.1 Git Branching - Branches in a Nutshell](http://book.git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell#ch03-git-branching)
 
 ----
 
@@ -67,10 +67,10 @@ git push --set-upstream origin <new-branch-name>
 git push origin --delete <old-branch-name>
 ```
 
-## Removing an upstream for a local branch
+## Removing an Upstream for a Local Branch
 
 ```shell
-git branch --unset-upstream <branchname>
+git branch --unset-upstream <branch-name>
 ```
 
 ## Listing Branches
@@ -102,14 +102,4 @@ git branch --all
 git branch -r
 git branch --remotes
 
-```
-
-----
-
-### Basic Merging Conflicts
-
-A graphical tool to resolve merging issues:
-
-```shell
-git mergetool
 ```
