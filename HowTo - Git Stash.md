@@ -37,7 +37,7 @@ git stash drop            # drop top hash, stash@{0}
 git stash drop stash@{n}  # drop specific stash - see 'git stash list'
 ```
 
-## Removing all Entries from the Stash
+## Removing All Entries from the Stash
 
 ```bash
 git stash clear
@@ -58,4 +58,11 @@ git stash pop               # use top entry, stash@{0}
 ```bash
 git stash                       # save current changes
 git stash branch <new_branch>   # use top entry, stash@{0}
+```
+
+## Comparing Changes from Stash to Current Branch
+
+```bash
+git stash show -p               # see most recent entry
+git stash show -p stash@{n}     # see stash entry number <n>
 ```
