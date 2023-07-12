@@ -1,21 +1,28 @@
 # HowTo - Git Undo
 
-### Undo Last Commit
+REF.: [Git - git-reset Documentation](https://git-scm.com/docs/git-reset)  
+REF.: [Git - git-commit Documentation](https://git-scm.com/docs/git-commit)  
 
-```git
+**Note:** `Undo` is NOT a git command! It is just referring to help undoing things while using `git`.
+
+----
+
+## Undo Last Commit
+
+```bash
 git reset --soft HEAD^
 ```
 
 _Note: `HEAD^` goes 1 step back, `HEAD^^/HEAD~2` goes 2 steps back, etc._
 
-### Delete Last Commit
+## Delete Last Commit
 
-```git
+```bash
 git reset --hard HEAD^
 ```
 
-### Add Files to Last Commit
+## Add Files to Last Commit
 
-```git
+```bash
 git commit --amend
 ```

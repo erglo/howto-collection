@@ -1,10 +1,10 @@
-# HowTo - Git Bash - Adding a permanent alias (Windows)
+# HowTo - Git Bash - Using `alias` on Windows
 
 REF.: [Dev.to - Git Bash on Windows: adding a permanent alias](https://dev.to/mhjaafar/git-bash-on-windows-adding-a-permanent-alias-198g) by Hafiz Jaafar
 
 ----
 
-## Checking available aliases
+## Checking Available Aliases
 
 ```bash
 $ alias
@@ -12,7 +12,7 @@ $ alias
 # alias ls='ls -F --color=auto --show-control-chars'
 ```
 
-## Add an alias permanently
+## Adding a Permanent Alias
 
 ```bash
 $ explorer C:/Program\ Files/Git/etc/profile.d/

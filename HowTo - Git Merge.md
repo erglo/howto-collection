@@ -17,7 +17,7 @@ git merge <feature_branch>
 
 A graphical tool to resolve merging issues:
 
-```shell
+```bash
 git mergetool
 ```
 
