@@ -20,7 +20,7 @@ git submodule add https://path-to/the-submoule-repo.git [dir_name]
 git commit -m "Add submodule <name>"
 ```
 
-## Updating the submodule's code
+## Updating the submodule's code (or resetting to detached HEAD)
 
 ```bash
 git submodule update [--init] [--recursive]
@@ -54,15 +54,17 @@ git config --global fetch.recurseSubmodules
 ## Updating a submodule
 
 ```bash
-# Get all new data from the remote to your local cache 
-cd dir_name  # submodule folder in your repo
+# Change into the submodule folder and git switch to the submodule's repository
+cd dir_name
 git fetch
-# Log to verify what you have 
-git log
+git log  # verify what you have
 # Checkout on the desired checksum
 git checkout -q <ckecksum>
 # or use 'git pull' to get latest submodule changes
+# or merge main into the detached branch using
 cd ..  # go back to your repo
+# Note: do NOT use `git submodule update`
+git add <submodule>  # commit changes
 ```
 
 ## Removing a submodule
