@@ -13,6 +13,12 @@ REF.: [Git - git-commit Documentation](https://git-scm.com/docs/git-commit)
 git reset --soft HEAD^
 ```
 
+## Undo Until Specific Commit
+
+```bash
+git reset --soft <hash>
+```
+
 _Note: `HEAD^` goes 1 step back, `HEAD^^/HEAD~2` goes 2 steps back, etc._
 
 ## Delete Last Commit
