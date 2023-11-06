@@ -30,6 +30,13 @@ git push origin <new_tagname> :<old_tagname>
 
 **Note:** The colon `:` removes the tag from the remote repository. Everyone else needs to update locally as well with `git pull --prune --tags`.
 
+### Editing an Existing Tag Message
+
+```bash
+# Replaces an existing tag with the same name and adds a message
+git tag <tagname> <tagname>^{} -f -m "<new message>"
+```
+
 ## Listing Tags
 
 ```bash
@@ -43,8 +50,10 @@ git tag -n
 ## Tagging Later
 
 ```bash
-# Tag a specific commit hash
+# Tag a specific commit hash (with annotation)
 git tag -a <tagname> 9fceb02
+# ... (without annotation, a light-weight tag)
+git tag <tagname> 9fceb02
 ```
 
 ## Sharing Tags Remotely
