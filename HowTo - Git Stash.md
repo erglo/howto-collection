@@ -1,8 +1,8 @@
 # HowTo - Git Stash
 
-REF.: [Git - git-stash Documentation](https://git-scm.com/docs/git-stash)  
-REF.: [How to Apply Git Stash to a Different Branch?](https://www.designcise.com/web/tutorial/how-to-apply-git-stash-to-a-different-branch) by _Daniyal Hamid_
-
+> REF.: [Git - git-stash Documentation](https://git-scm.com/docs/git-stash)  
+> REF.: [How to Apply Git Stash to a Different Branch?](https://www.designcise.com/web/tutorial/how-to-apply-git-stash-to-a-different-branch) by _Daniyal Hamid_  
+> REF.: [Git - git-rebase Documentation](https://git-scm.com/docs/git-rebase)
 ----
 
 ## Saving Changes to a Stash
@@ -67,4 +67,22 @@ git stash branch <new_branch>   # use top entry and create new branch
 ```bash
 git stash show -p               # see most recent entry
 git stash show -p stash@{n}     # see stash entry number <n>
+```
+
+## Adding Previous Commit to Stash
+
+```bash
+# If not already pushed to remote repository do this...
+git rebase -i HEAD~2
+# This will open your default editor.
+# Now reorder the two commits (they are listed oldest => newest) from this...
+> pick 222 commit to be stashed
+> pick 111 commit to be pushed to remote
+# to this...
+> pick 111 commit to be pushed to remote
+> pick 222 commit to be stashed
+# Save + exit and wait for git to finish. Now you can ...
+git reset --soft HEAD~1
+git stash
+# Source: <https://stackoverflow.com/questions/26884364/how-to-stash-my-previous-commit>
 ```
