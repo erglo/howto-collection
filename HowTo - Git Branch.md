@@ -96,3 +96,15 @@ git branch -a | --all
 # remote branches only
 git branch -r | --remotes
 ```
+
+### ... Ordered by Committer Date
+
+```bash
+git for-each-ref --sort=-committerdate refs/heads/
+# Or using git branch (since version 2.7.0)
+git branch --sort=-committerdate  # DESC
+git branch --sort=committerdate  # ASC
+# or
+git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+# Source: <https://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit>
+```
